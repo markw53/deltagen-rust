@@ -1,0 +1,29 @@
+[package]
+name = "deltagen"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "Directory tree delta generator: compute, apply, invert deterministic patches between snapshots."
+license = "MIT"
+repository = ""
+
+[dependencies]
+walkdir = "2"
+sha2 = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+clap = { version = "4", features = ["derive"] }
+rayon = { version = "1.7", optional = true }
+ignore = { version = "0.4", optional = true }
+filetime = "0.2"
+hex = "0.4"
+
+[features]
+parallel = ["rayon"]
+ignore = ["ignore"]
+
+[dev-dependencies]
+tempfile = "3"
+assert_fs = "1"

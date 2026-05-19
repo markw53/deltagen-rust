@@ -1,0 +1,63 @@
+# Rust build artifacts
+/target/
+**/target/
+
+# Cargo registry/cache (usually not needed, but safe to ignore)
+/.cargo/
+
+# Editor and IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS / Windows cruft
+.DS_Store
+Thumbs.db
+
+# Swap and backup files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Logs and runtime files
+*.log
+*.pid
+
+# Test and temp helpers
+/tmp/
+*.tmp
+*.cache
+.pytest_cache/
+
+# Generated artifacts and outputs
+patch.json
+*.patch
+*.out
+
+# Node artifacts if you ever add JS tooling
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+.pnpm-debug.log
+
+# Build artifacts from other toolchains
+build/
+dist/
+coverage/
+
+# Secrets and environment files
+.env
+.env.local
+.env.*.local
+secrets.toml
+
+# OS-specific
+desktop.ini
+
+# Optional: ignore large example outputs or generated examples
+/examples/**/node_modules/
+examples/**/target/
